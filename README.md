@@ -16,6 +16,9 @@ Twitter on the Ethereum Blockchain
 1. Set up Truffle
 ```npm install -g truffle```
 
+2. Copy `.env.sample` over to `.env` and enter both your API_URL and MNEMONIC.
+
+
 
 ### Using it to deploy (or migrate) a contract instance
 
