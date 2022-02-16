@@ -12,14 +12,17 @@ Twitter on the Ethereum Blockchain
 ### Configuring Truffle Framework to the Rinkeby test network
 
 1. Set up Truffle
-```npm install -g truffle```
+```
+npm install -g truffle
+```
 
 2. In the /tests directory copy `.env.sample` over to `.env` and enter both your API_URL and MNEMONIC.
 
 ### Using it to deploy (or migrate) a contract instance
 
-Run `truffle deploy --network rinkeby` in the /tests directory order to get contract deployed.
+3. Run `truffle deploy --network rinkeby` in the /tests directory order to get contract deployed.
 
 ### Accessing the deployed instance and interact with it (via Truffle console)
 
-Run `truffle console --network rinkeby` and then once inside of the console run `Twitter.deployed().then(function(instance){return instance });` to verify your contract is deployed.
+4. Run `truffle console --network rinkeby` to load up the console 
+5. Run `Twitter.deployed().then(function(instance){return instance });` to verify your contract is deployed.
