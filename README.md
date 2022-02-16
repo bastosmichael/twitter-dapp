@@ -4,24 +4,22 @@ Twitter on the Ethereum Blockchain
 ## Truffle Configuration
 
 ### Make sure you already have
-- Download your wallet from [Metamask](https://metamask.io/)
-- Select a drop down to show/hide test networks
-- Get some [test ether](https://faucet.ropsten.be/) (may take more than one attempt)
-- [Signup for Infura](https://infura.io/register) to create a new project and Ropsten API key
+1. Download your wallet from [Metamask](https://metamask.io/)
+2. Select a drop down to show/hide test networks
+3. Get some Rinkeby [test ether](https://faucet.rinkeby.io/) (may take more than one provider or attempt)
+4. [Signup for Infura](https://infura.io/register) to create a new project and Rinkeby API key
 
-### Configuring Truffle Framework to the Ropsten test network
-
-#### Setup
+### Configuring Truffle Framework to the Rinkeby test network
 
 1. Set up Truffle
 ```npm install -g truffle```
 
-2. Copy `.env.sample` over to `.env` and enter both your API_URL and MNEMONIC.
-
-
+2. In the /tests directory copy `.env.sample` over to `.env` and enter both your API_URL and MNEMONIC.
 
 ### Using it to deploy (or migrate) a contract instance
 
-
+Run `truffle deploy --network rinkeby` in the /tests directory order to get contract deployed.
 
 ### Accessing the deployed instance and interact with it (via Truffle console)
+
+Run `truffle console --network rinkeby` and then once inside of the console run `Twitter.deployed().then(function(instance){return instance });` to verify your contract is deployed.
