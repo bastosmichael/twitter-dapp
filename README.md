@@ -57,7 +57,7 @@ Run `truffle deploy --network rinkeby` in the /tests directory order to get cont
 Run `truffle console --network rinkeby` to load up the console 
 Run `Twitter.deployed().then(function(instance){return instance });` to verify your contract is deployed.
 
-### Run Web3 application either locally or on Rinkeby
+## Run Web3 application either locally or on Rinkeby
 
 Go into /app directory and run `npm install` and then `yarn start`
 
