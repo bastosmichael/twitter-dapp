@@ -1,5 +1,5 @@
 # twitter-dapp
-Twitter on the Ethereum Blockchain
+Twitter on the Ethereum Blockchain Proof of Concept
 
 ![Screenshot](screenshot.png)
 
