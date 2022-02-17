@@ -16,13 +16,18 @@ Twitter on the Ethereum Blockchain
 npm install -g truffle
 ```
 
-2. In the /tests directory copy `.env.sample` over to `.env` and enter both your API_URL and MNEMONIC.
+2. Install Ganache-CLI
+```
+npm install -g ganache-cli
+```
+
+3. In the /tests directory copy `.env.sample` over to `.env` and enter both your API_URL and MNEMONIC.
 
 ### Using it to deploy (or migrate) a contract instance
 
-3. Run `truffle deploy --network rinkeby` in the /tests directory order to get contract deployed.
+4. Run `truffle deploy --network rinkeby` in the /tests directory order to get contract deployed.
 
 ### Accessing the deployed instance and interact with it (via Truffle console)
 
-4. Run `truffle console --network rinkeby` to load up the console 
-5. Run `Twitter.deployed().then(function(instance){return instance });` to verify your contract is deployed.
+5. Run `truffle console --network rinkeby` to load up the console 
+6. Run `Twitter.deployed().then(function(instance){return instance });` to verify your contract is deployed.

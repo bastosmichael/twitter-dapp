@@ -10,6 +10,10 @@
     "eth-ens-namehash": "^2.0.8",
     "truffle-hdwallet-provider": "^1.0.17"
   },
+  "devDependencies": {
+    "dotenv": "^12.0.3",
+    "@openzeppelin/test-helpers": "^0.5.3"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

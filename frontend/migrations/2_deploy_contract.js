@@ -1,5 +1,5 @@
 const Twitter = artifacts.require("Twitter");
-//const namehash = require("eth-ens-namehash");
+const namehash = require("eth-ens-namehash");
 
 module.exports = async function(deployer, _network, accounts) {
   await deployer.ens.setAddress(
@@ -9,7 +9,7 @@ module.exports = async function(deployer, _network, accounts) {
     "donald.name", accounts[1], { from: accounts[0] }
   );
 
-  await deployer.deploy(Twitter, deployer.ens.ensSettings.registryAddress);
+  await deployer.deploy(Twitter, deployer.ens.registryAddress);
   const twitter = await Twitter.deployed();
 
   // User 1
@@ -22,6 +22,6 @@ module.exports = async function(deployer, _network, accounts) {
   await twitter.tweet("Build the wall!", {from: "donald.name"});
 
   //that's how you can retrieve the name associated to an address
-  //console.log(await twitter.resolve(namehash.hash('alice.name')));
-  //console.log(await twitter.resolve(namehash.hash('donald.name')));
+  // await twitter.resolve(namehash.hash('alice.name'));
+  // await twitter.resolve(namehash.hash('donald.name'));
 };
