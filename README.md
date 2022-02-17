@@ -1,6 +1,8 @@
 # twitter-dapp
 Twitter on the Ethereum Blockchain
 
+![Screenshot](screenshot.png)
+
 ## Truffle Configuration
 
 ### Install dependencies
@@ -54,3 +56,13 @@ Run `truffle deploy --network rinkeby` in the /tests directory order to get cont
 
 Run `truffle console --network rinkeby` to load up the console 
 Run `Twitter.deployed().then(function(instance){return instance });` to verify your contract is deployed.
+
+### Run Web3 application either locally or on Rinkeby
+
+Go into /app directory and run `npm install` and then `yarn start`
+
+**If running locally be sure to import private keys from ganache into Metamask
+
+## Notes
+
+- UI is breaking and still needs some work.
