@@ -19,7 +19,7 @@ Install Ganache-CLI
 npm install -g ganache-cli
 ```
 
-Then run `ganache-cli` and fetch first two wallet addresses for ALICE_ADDRESS and DONALD_ADDRESS
+Then run `ganache-cli --account_keys_path keys.json` and it runs the server and stores keys in local keys.json hash
 
 ### Configuring Truffle Framework to run locally
 
@@ -30,6 +30,8 @@ Copy `.env.sample` over to `.env` and enter both your ALICE_ADDRESS and DONALD_A
 Run `truffle deploy --network development` in the /tests directory order to get contract deployed.
 
 ### Accessing the deployed instance and interact with it (via Truffle console)
+
+Run `npm install` in order to hd wallet and other dependencies.
 
 Run `truffle console --network development` to load up the console 
 
@@ -49,6 +51,8 @@ Run `Twitter.deployed().then(function(instance){return instance });` to verify y
 Copy `.env.sample` over to `.env` and enter both your API_URL, MNEMONIC, ALICE_ADDRESS and DONALD_ADDRESS.
 
 ### Using it to deploy (or migrate) a contract instance
+
+Run `npm install` in order to hd wallet and other dependencies.
 
 Run `truffle deploy --network rinkeby` in the /tests directory order to get contract deployed.
 

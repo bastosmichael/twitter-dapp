@@ -1,6 +1,13 @@
+'use strict';
+const fs = require('fs');
+
+let rawkeys = fs.readFileSync('keys.json');
+let keys = JSON.parse(rawkeys)['private_keys'];
+console.log(keys);
+
 var HDWalletProvider = require("truffle-hdwallet-provider");
 require('dotenv').config();
-const { API_URL, MNEMONIC, DEV_ALICE_ADDRESS, DEV_DONALD_ADDRESS, RINKEBY_ALICE_ADDRESS, RINKEBY_DONALD_ADDRESS } = process.env;
+const { API_URL, MNEMONIC, ADMIN_ADDRESS, RINKEBY_ADMIN_ADDRESS } = process.env;
 const path = require("path");
 
 module.exports = {
@@ -10,8 +17,7 @@ module.exports = {
       host: "127.0.0.1",
       port: 8545,
       network_id: "*",
-      accounts: [DEV_ALICE_ADDRESS,
-                 DEV_DONALD_ADDRESS]
+      accounts: Object.keys(keys)
     },
     rinkeby: {
       provider: function() {
@@ -19,8 +25,7 @@ module.exports = {
       },
       network_id: 4,
       gas: 4000000,      //make sure this gas allocation isn't over 4M, which is the max,
-      accounts: [RINKEBY_ALICE_ADDRESS,
-                 RINKEBY_DONALD_ADDRESS]
+      accounts: [RINKEBY_ADMIN_ADDRESS]
     }
   },
   compilers: {
