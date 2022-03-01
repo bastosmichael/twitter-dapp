@@ -7,8 +7,8 @@ export default ({ tweets }) => (
       <div key={tweet.id} className="list-group-item list-group-item-action">
         <div className="d-flex w-100 justify-content-between">
           <h5 className="mb-1">
-            {tweet.authorName} 
-            <span style={{fontSize: '0.5em'}}> ({tweet.authorAddress})</span>
+            {tweet.authorAddress} 
+            <span style={{fontSize: '0.5em'}}> ({tweet.authorName})</span>
           </h5>
           <small>{toDate(tweet.createdAt)}</small>
         </div>
